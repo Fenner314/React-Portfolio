@@ -1,0 +1,38 @@
+.resume-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: rgb(27, 27, 27);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 8px 1px black;
+    z-index: 100;
+
+    animation: btn-load .6s ease-in-out .3s;
+    animation-fill-mode: forwards;
+    transform: translateX(150%);
+}
+#resume-icon {
+    transition: opacity .6s;
+    margin-top: 0;
+}
+.resume-button:hover .icon-text {
+    opacity: 1;
+}
+.resume-button:hover .icon {
+    opacity: 0;
+}
+#resume-text {
+    left: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+    .resume-button {
+        bottom: 15px;
+        right: 15px;
+    }
+}

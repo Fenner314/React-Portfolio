@@ -1,0 +1,117 @@
+section#home {
+    height: 100vh;
+    position: relative;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 18%;
+    top: 40%;
+    line-height: 3.5rem;
+    z-index: 0;
+}
+
+#home h1 {
+    font-size: 60px;
+    position: relative;
+    top: 0;
+    color: white;
+}
+
+#home h3 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+#jacob {
+    color: var(--accent) !important;
+    margin-left: 20px;
+}
+
+.name-container {
+    display: flex;
+}
+
+.view-work-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 25%;
+    top: 50%;
+    border: 2px solid white;
+    padding: 5px;
+    padding-left: 13px;
+
+    transition: color .3s ease-out, border .3s ease-out, opacity .75s ease-in-out;
+}
+.view-work-button:hover {
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+.view-work-button:hover #down-arrow {
+    fill: var(--accent);
+}
+
+#down-arrow {
+    fill: white;
+    transform: translateY(-3px);
+    animation: down-arrow 2s infinite;
+
+    transition: fill .3s ease-out;
+}
+
+@media only screen and (min-width: 1358px) {
+    #home h1 {
+        font-size: 4.5rem;
+    }
+    #home h3 {
+        font-size: 2rem;
+    }
+    .view-work-button {
+        font-size: 1.25rem;
+        padding: 8px 8px 8px 16px
+    }
+}
+
+@media only screen and (min-width: 1358px) {
+    .view-work-button {
+        right: 10%;
+    }
+}
+
+@media only screen and (max-width: 814px) {
+    .view-work-button {
+        right: 50%;
+        top: 75%;
+        transform: translateX(50%)
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /*  =================
+    Home styles 
+    ================= */
+    .home-container {
+        line-height: 2.3rem;
+    }
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    #home h3 {
+        font-size: 1.2rem;
+    }
+    .view-work-button {
+        top: 70%;
+    }
+}
+
+@media only screen and (max-width: 341px) {
+    .view-work-button {
+        padding-left: 5px;
+        padding-right: 0;
+    }
+}

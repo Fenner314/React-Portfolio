@@ -1,0 +1,238 @@
+#project-section-container {
+    height: auto;
+    align-items: center;
+}
+
+#projects {
+    z-index: 30;
+    display: flex;
+    background-image: linear-gradient(to right, hsl(192deg 100% 13%), hsl(165deg 83% 12%));
+    padding: 48px;
+    /* height: 110vh; */
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1200px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-flex {
+    height: 100%;
+}
+
+#projects h1 {
+    z-index: 2;
+    color: var(--accent);
+    text-shadow: 1px 1px var(--darkGray);
+    width: 100%;
+    position: relative;
+    top: 10px;
+    margin-bottom: 40px;
+}
+
+.project-container {
+    /* width: 100%; */
+    /* height: 80%;  */
+    /* display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 250px 250px;
+    grid-gap: 1rem */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project {
+    /* border: 1px solid var(--accent); */
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    margin: 10px;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-size .5s;
+}
+.project:hover {
+    background-size: 110%;
+}
+.project:hover > div {
+    opacity: 1;
+}
+.project-1 {
+    background-image: url(../../src/utilities/cba.png);
+}
+.project-2 {
+    background-image: url(../../src/utilities/connect-four.png);
+}
+.project-3 {
+    background-image: url(../../src/utilities/artsmith.png);
+}
+.project-4 {
+    background-image: url(../../src/utilities/logo1000.png);
+}
+
+.project-overlay {
+    width: 100%; 
+    height: 100%;
+    padding: 1rem;
+    background-color: rgba(22, 22, 22, .9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+
+    transition: all .3s ease-in-out;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.project-info {
+    font-size: .85rem;
+    width: 90%
+}
+
+.project-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.project-links a {
+    transition: all .2s ease-in-out;
+}
+.project-links a:hover {
+    color: var(--accent);
+}    
+
+@media only screen and (min-width: 1358px) {
+    .project-title {
+        font-size: 1.75rem;
+    }
+    .project-info {
+        font-size: .95rem;
+    }
+    .project-links {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 1086px) {
+    .project-container {
+        grid-template-columns: 370px 370px;
+    }
+    .project {
+        background-size: 110%;;
+    }
+    .project:hover {
+        background-size: 120%;;
+    }
+    .project-3 {
+        background-position: left;
+    }
+    .project-4 {
+        background-size: 100%;
+    }
+    .project-4:hover {
+        background-size: 110%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {  
+    #projects h1 {
+        position: relative;
+    }
+    .project-container {
+        grid-template-columns: 300px 300px;
+    }
+    .project {
+        background-size: 130%;
+    }
+    .project:hover {
+        background-size: 140%;
+    }
+    .project-4 {
+        background-size: 100%;
+    }
+    .project-4:hover {
+        background-size: 110%;
+    }
+    .project-info {
+        font-size: .75rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 814px) {
+    .project-container {
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(4, 250px);
+        margin-top: 40px;
+        position: relative;
+    }
+    .project {
+        background-size: 100%;
+    }
+    .project-3 {
+        background-position: center;
+    }
+    .project:hover {
+        background-size: 110%;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .project-title {
+        font-size: 1.4rem;
+    }
+    .project-info {
+        font-size: .9rem;
+        width: 100%;
+    }
+    .project-links {
+        font-size: .9rem
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #project-section-container {
+        min-height: 900px;
+    }
+    .project-overlay {
+        padding: .5rem;
+    }
+}
+
+@media only screen and (max-width: 494px) {
+    #projects {
+        padding: 70px 0 70px;
+    }
+    .project-container {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, 275px);
+    }
+    .project {
+        background-size: 120%;
+    }
+    .project:hover {
+        background-size: 130%;
+    }
+    .project-3 {
+        background-position: left;
+    }
+    .project-4 {
+        background-size: 100%;
+    }
+    .project-4:hover {
+        background-size: 110%;
+    }
+
+}

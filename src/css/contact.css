@@ -1,0 +1,41 @@
+#contact{
+    min-height: 101vh;
+    display: flex;
+    position: relative;
+}
+    
+.copy {
+    color: #878787;
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    left: 0; 
+    right: 0;
+    margin: auto;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.contact-mesage {
+    max-width: 40ch;
+    margin-bottom: 40px !important;
+}
+
+@media only screen and (min-width: 1358px) {
+    .contact-mesage {
+        font-size: 1.25rem;
+    }
+}
+ 
+@media only screen and (max-width: 600px) {
+    .contact-form-container {
+        margin-bottom: 30px;
+    }
+}

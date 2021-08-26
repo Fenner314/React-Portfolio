@@ -1,0 +1,129 @@
+@keyframes left{
+    0% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(-35%);
+    }
+    80% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes middle {
+    0% {
+        transform: rotate(0);
+    }
+    4% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(360deg);
+    }
+    40% {
+        transform: rotate(720deg);
+    }
+    60% {
+        transform: rotate(1080deg);
+    }
+    78% {
+        transform: rotate(0);
+    }
+}
+@keyframes right{
+    0% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(35%);
+    }
+    80% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes left-to-middle {
+    from {
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0%);
+    }
+}
+@keyframes middle-to-right {
+    from {
+        transform: translateX(0%);
+    } to {
+        transform: translateX(100%);
+    }
+}
+
+
+/*  =============
+    Loader Styles
+    ============= */
+.loader {
+    background-color: rgb(22, 22, 22);
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation-fill-mode: forwards;
+    transform: translateX(0%);
+
+    transition: transform .5s ease-in-out;
+}
+
+.show {
+    animation: left-to-middle .5s ease-in-out;
+    transform: translateX(0%);
+}
+.away {
+    animation: middle-to-right .5s ease-in-out;
+    transform: translateX(100%);
+}
+
+.load-container {
+    height: 16vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gif {
+    display: flex;
+}
+
+#one {
+    position: relative;
+    left: 100px;
+    z-index: 3;
+
+    animation: left 2s ease-in-out infinite;
+}
+#two {
+    z-index: 2;
+
+    animation: middle 2s linear infinite;
+}
+#three {
+    position: relative;
+    right: 106px;
+    z-index: 1;
+
+    animation: right 2s ease-in-out infinite;
+}
+
+@media only screen and (min-width: 1150px) {
+    .load-container {
+        transform: scale(1.5)
+    }
+}

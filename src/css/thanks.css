@@ -1,0 +1,49 @@
+.confirm-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, rgb(49, 49, 49), rgb(20, 20, 20));
+}
+
+.confirm-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    max-width: 380px;
+    padding: 24px;
+    background: var(--lightGray);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 black;
+}
+
+.header h1 {
+    margin-bottom: 0;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    letter-spacing: .075em;
+    font-weight: 300;
+}
+
+.body > span {
+    padding: 10px 0;
+}
+ 
+#back-link {
+    cursor: pointer;
+    transition: all .3s linear;
+    font-weight: 500;
+    padding: 10px 0;
+}
+#back-link:hover,
+#back-link:focus {
+    color: var(--accent);
+}

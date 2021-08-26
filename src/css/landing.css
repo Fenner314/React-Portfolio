@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+/*  ==============
+    General Styles
+    ============== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#page-background {
+    width: 100vw;
+    /* position: fixed;
+    top: -150px; */
+}
+
+#video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+@media (min-aspect-ratio: 16/9) {
+    .showcase {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, .2), 
+            rgba(0, 0, 0, .2)
+          ), url(../utilities/LandingBackground-desktop.jpg);
+        background-size: cover;
+        background-position: 50%;
+    }
+    
+}
+@media (max-aspect-ratio: 16/9) {
+    .showcase {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, .2), 
+            rgba(0, 0, 0, .2)
+          ), url(../utilities/LandingBackground-mobile.jpg);
+        background-size: cover;
+        background-position: 50%;
+    }
+}
+
+.showcase {
+    color: white;
+    overflow-y: hidden;
+}
+
+/*  =========
+    Keyframes
+    ========= */
+
+@keyframes bar-load {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 200%;
+    }
+}
+
+@keyframes title-load {
+    0% {
+        transform: translateY(100px);
+    }
+
+    90% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes sites-load {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes scale-down {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.8);
+    }
+}
+
+@keyframes overlay {
+    0% {
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+        opacity: 1;
+    }
+    50% {
+        width: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes left-arrow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.full-screen {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/*  =============
+    Header Styles
+    ============= */
+
+.showcase header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    margin: auto;
+    width: 70%;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}    
+
+.title {
+    margin-top: 40px;
+    padding: 5px;
+    transform: translateY(100px);
+}
+
+.title-load {
+    animation: title-load 1.5s 1s;
+    animation-fill-mode: forwards;
+    transform: translateY(100px);
+}
+
+header hr {
+    background-image: linear-gradient(to right, rgb(7, 205, 255), rgb(34, 185, 153));
+    border: none;
+    height: 2px;
+    position: absolute;
+    left: -100%; right: 0; bottom: 0;
+    margin: auto;
+
+    animation-fill-mode: forwards;
+    width: 0;
+}
+
+.hr-load {
+    animation: bar-load .7s ease-in .1s;
+    animation-fill-mode: forwards;
+    width: 0;
+}
+
+/*  ============
+    Links Styles
+    ============ */
+
+.sites-container {
+    font-weight: 400;
+    font-family: 'Proza Libre', sans-serif;
+    font-style: italic;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sites {
+    font-size: 1.875rem;
+    position: absolute;
+    top: 35%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+.left-container, .right-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.musician {
+    opacity: 0;
+
+    animation: sites-load .5s ease-in-out 4.5s;
+    animation-fill-mode: forwards;
+}
+.musician:hover .left {
+    display: none;
+}
+.developer {
+    opacity: 0;
+    cursor: pointer;
+
+    animation: sites-load .5s ease-in-out 5.5s;
+    animation-fill-mode: forwards;
+}
+
+.left-arrow-hover {
+    opacity: 1 !important;
+    transform: translateX(-15px) !important;
+}
+.right-arrow-hover {
+    opacity: 1 !important;
+    transform: translateX(15px) !important;
+}
+
+#middle {
+    align-self: center;
+    opacity: 0;
+
+    animation: sites-load .5s ease-in-out 5s;
+    animation-fill-mode: forwards;
+}
+
+.left-hidden {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .5s ease-in-out;
+}
+.left-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-15px);
+
+    transition: all .5s ease-in-out;
+}
+.right-hidden {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .5s ease-in-out;
+}
+.right-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(15px);
+
+    transition: all .5s ease-in-out;
+}
+
+.construction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    box-shadow: 1px 1px 8px 1px black;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    transition: all .5s ease-in-out;
+}
+
+.construction span {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.overlay {
+    background-color: rgb(34, 34, 34, 0.5);
+    pointer-events: all;
+
+    transition: all .5s ease-in-out;
+}
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+    #fenner {
+        padding: 0;
+        margin: -90px;
+    }
+    .sites {
+        transform: translateY(-30%);
+        display: flex;
+        flex-direction: column;
+        top: 50%;
+        font-size: 1.4rem;
+        padding: 0;
+    }
+    .left-container {
+        transform: translateX(-25%);
+        height: 50px;
+    }
+    .right-container {
+        transform: translateX(22%);
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    #fenner {
+        margin: -50px;
+    }
+    .sites {
+        flex-direction: column;
+        top: 50%;
+        font-size: 1.2rem;
+        padding: 0;
+    }
+    .left-container {
+        transform: translateX(-25%);
+    }
+    .right-container {
+        transform: translateX(14%);
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .sites {
+        font-size: 2.25rem;
+    }
+}
+

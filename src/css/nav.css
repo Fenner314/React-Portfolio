@@ -1,0 +1,273 @@
+.logo {
+    padding: 0 20px;
+    background: transparent;
+    position: fixed;
+    top: -25px;
+    z-index: 30;
+    transition: opacity .6s ease-in-out .6s;
+    /* opacity: 0; */
+
+    /* animation: logo-load 1s ease-in-out 3800ms; */
+    /* animation-fill-mode: forwards; */
+}    
+.logo-change {
+    opacity: 0;
+    transition-delay: 0s;
+}
+.logo-small {
+    padding: 0 20px;
+    background: transparent;
+    position: fixed;
+    top: 27px;
+    left: 51.5px;
+    z-index: 29;
+    transition: all 1s ease-in-out;
+
+    /* animation: logo-load 2s ease-in-out 3800ms;
+    animation-fill-mode: forwards;
+    opacity: 0; */
+}
+.logo-small-change {
+    transform: translate(-30px) scale(2);
+} 
+.logo-small-change-back {
+    transform: translate(0) scale(1);
+} 
+
+nav {
+    position: fixed;
+    left: 0px;
+    top: 120px;
+    padding: 10px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+    background-color: var(--darkGray);
+    text-align: center;
+    justify-content: space-between;
+
+    animation: nav-load .6s ease-in-out 4s;
+    animation-fill-mode: forwards;
+    transform: translateX(-100%)
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+nav li {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.media-container li {
+    margin: 5px 0;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+    z-index: 13;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 20px;
+}
+  
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(247, 247, 247);
+    border: 2px, solid, rgb(247, 247, 247);
+    border-radius: 10px;
+    z-index: 4;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+  
+
+/*  ===========
+    Icon styles
+    =========== */
+
+.icon {
+    cursor: pointer;
+    margin-top: 20px;
+    padding-top: 0px;
+    transition: all .5s ease-in-out .05s;
+    animation: icon-load .5s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+.icon:hover {
+    opacity: 0;
+}
+
+.nav-button {
+    position: relative;
+}
+.nav-button:hover .icon-text {
+    opacity: 1;
+    transition: opacity .5s ease-in-out .05s;
+}
+.nav-button:hover .icon {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.nav-button-text {
+    position: absolute;
+    top: 25px;
+}
+
+#home-icon {
+    animation-delay: 5.2s;
+}
+
+#about-icon {
+    animation-delay: 5.4s;
+}
+
+#projects-icon {
+    animation-delay: 5.6s;
+}
+
+#contact-icon {
+    animation-delay: 5.8s;
+}
+
+#github-icon {
+    animation: icon-load .5s ease-in-out;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+#linkedin-icon {
+    animation: icon-load .5s ease-in-out;
+    animation-delay: 6.2s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+.icon-text {
+    cursor: pointer;
+    position: absolute;
+    left: 0; right: 0;
+    margin: 0 auto;
+    color: var(--accent);
+    font-style: normal;
+    font-size: 13px;
+    opacity: 0;
+    /* visibility: hidden; */
+
+    transition: opacity .5s;
+}
+
+@media only screen and (max-width: 1000px) {  
+    nav {
+        right: 0px;
+        left: auto;
+        top: 0px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        width: 400px;
+        transition: none;
+        
+        animation: nav-tablet-load .6s ease-in-out;
+        animation-fill-mode: forwards;
+        transform: translateY(-100%);
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+        margin: 20px;
+        padding: 0;
+    }
+    nav li {
+        margin: 0;
+        padding: 0;
+    }
+    .media-container {
+        display: flex;
+        justify-content: center;
+        width: 25%;
+    }
+
+    #home-text {
+        position: relative;
+        top: -26px;
+    }
+    #projects-text {
+        position: relative;
+        top: -26px;
+    }
+    #about-text {
+        position: relative;
+        top: -26px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        display: none;
+    }    
+    .logo-small {
+        padding: 0 20px;
+        background: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0px 20px;
+        z-index: 29;
+        transition: all 1s ease-in-out;
+        transform: scale(1.4);
+    
+        animation: logo-load 2s ease-in-out;
+    }
+    nav {
+        width: 100vw;
+        top: 69px;
+        transform: translateX(100%);
+        opacity: 0;
+
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        animation: none;
+    }
+    .nav-toggle {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .burger{
+        display: block;
+        z-index: 50;
+    }
+    .burger-toggle .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .burger-toggle .line2{
+        opacity: 0;
+    }
+    .burger-toggle .line3{
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    .pseudo-nav {
+        position: fixed;
+        width: 100vw;
+        height: 70px;
+        z-index: 28;
+        background-color:var(--darkGray);
+        transition: background-color .6s ease-in-out;
+    }
+    .nav-gray {
+        background-color:var(--darkGray);
+    }
+}

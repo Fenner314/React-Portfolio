@@ -1,0 +1,26 @@
+#audio {
+    display: none;
+}
+
+#sound {
+    z-index: 100;
+    position: fixed;
+    right: 20px; 
+    top: 20px;
+}
+#sound:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+    #sound {
+        top: 88px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #sound {
+        top: 14px;
+        right: 72px;
+    }
+}
