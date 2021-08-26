@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Context } from '../../App';
 import { hiddenY } from '../../utilities/functions/helperFunctions';
 import Nav from './DevComponents/Nav';
@@ -19,6 +19,7 @@ export default function Dev() {
         hiddenY();
         window.addEventListener('resize', hiddenY);
     }, [])
+    
     return (
         <>
             <div className="container" style={noScroll ? {overflow: 'noscroll'} : null}>

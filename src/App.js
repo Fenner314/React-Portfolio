@@ -8,11 +8,6 @@ import Dev from './components/devPage/Dev';
 import Thanks from './components/thanks/Thanks';
 import Form from './components/devPage/DevComponents/Contact/Form';
 
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-
 export const Context = React.createContext();
 
 function App() {

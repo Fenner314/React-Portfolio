@@ -29,13 +29,13 @@ export default function Home() {
                 {/* <h1>Hello,</h1>
                 <h1>I'm <span className="jacob">Jacob</span>.</h1>
                 <h3>Front End Web Developer</h3> */}
-                <h1 className="hello my-3"></h1>
+                <h1 className="hello my-3"> </h1>
                 <div className="name-container my-3">
-                    <h1 className="im"></h1>
-                    <h1 id="jacob"></h1>
-                    <h1 className="period"></h1>
+                    <h1 className="im"> </h1>
+                    <h1 id="jacob"> </h1>
+                    <h1 className="period"> </h1>
                 </div>
-                <h3 className="dev my-3"></h3>
+                <h3 className="dev my-3"> </h3>
             </div>
             
             <Link

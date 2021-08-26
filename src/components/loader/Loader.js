@@ -11,14 +11,6 @@ export default function Loader() {
         }
     }
 
-    const handleTransition = () => {
-        setTimeout(() => {
-            if (!loading) {
-                return {transform: 'translate(-100%)', transition: 'none'}
-            }
-        }, 100)
-    }
-
     return (
         <div className={loading ? "loader full-screen show" : "loader full-screen away"} 
             style={testing()}

@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import DelayLink from 'react-delay-link';
-import { Link } from 'react-router-dom';
 import { Context } from '../../App';
 import {
     logoNameOnly,
     stackedName,
-    muteRed,
     logoLeftPlain,
     logoMiddle,
     logoRightPlain
