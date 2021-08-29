@@ -6,11 +6,25 @@ export default function Projects() {
         return (
             <div className="project-container">
                 <ProjectSquare 
+                    projectNumber={5}
+                    title={'Booth Or Table'}
+                    info={'A start up company that enabled guests to see wait times for restaurants, check in to the waitlist online, and get notified when their table is ready. I took care of most of the front end work for the widget and restaurant portal. Guest attendance increased by an average of 35% at local restaurants that implemented this software.'}
+                    liveLink={'http://boothortable.com'}
+                    codeLink={'https://github.com/BoothOrTable/widget-react'}
+                />
+                <ProjectSquare 
                     projectNumber={3}
                     title={'Artsmith Adornments'}
                     info={'A jewelry E-Commerce website that I created with React.js. I use hooks to handle rendering items, getting their details, and adding items to the shopping cart. I mostly used custom CSS, but I used Bootstrap in a few instances. I handle user authentication with Firebase.'}
                     liveLink={'http://artsmithadorn.surge.sh'}
                     codeLink={'https://github.com/Fenner314/Artsmith-Adornments'}
+                />
+                <ProjectSquare 
+                    projectNumber={6}
+                    title={'Timothy Anderson'}
+                    info={'Professional website for world-renowned trombonist and teacher, Timothy Anderson. Its simple, single-page design using React.js features parallax backgrounds and efficiently used components. Following website launch, the number and quality of applications for the trombone studio at his conservatory were greater than any other year.'}
+                    liveLink={'http://timothyandersontrombone.com'}
+                    codeLink={'https://github.com/Fenner314/TimAnderson'}
                 />
                 <ProjectSquare 
                     projectNumber={1}
@@ -29,9 +43,9 @@ export default function Projects() {
                 <ProjectSquare 
                     projectNumber={4}
                     title={'My Portfolio'}
-                    info={'I created my own portfolio with basic HTML, CSS, and JavaScript. All of the css animations are custom, as is the design. I used a short snippet of jQuery to achieve the smooth scrolling effect.'}
-                    liveLink={'http://artsmithadorn.surge.sh'}
-                    codeLink={'https://github.com/Fenner314/Artsmith-Adornments'}
+                    info={'I created my own portfolio with basic HTML, CSS, and JavaScript, but later converted it to use React.js. All of the css animations are custom, as is the design. I had issues with achieving some desired effects from the transfer that I solved with npm packages like howler, react-delay-link, and react-scroll.'}
+                    liveLink={'http://fennerstudios.com'}
+                    codeLink={'https://github.com/Fenner314/react-portfolio'}
                 />
             </div>
         )
