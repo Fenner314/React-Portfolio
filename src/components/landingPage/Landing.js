@@ -17,7 +17,7 @@ export default function Landing() {
     const [devHover, setDevHover] = useState(false);
     const [size, setSize] = useState('desktop');
 
-    const { loading, setLoading, handlePageChange } = useContext(Context);
+    const { loading, setLoading, setDevPage, handlePageChange } = useContext(Context);
 
     const largeScreen = window.matchMedia('(min-width: 1350px)');
     const tablet = window.matchMedia('(min-width: 501px) and (max-width: 1000px)');
@@ -56,6 +56,10 @@ export default function Landing() {
 
     const handleDevHover = () => {
         devHover ? setDevHover(false) : setDevHover(true)
+    }
+
+    const handleDevPageChange = () => {
+        setDevPage(true)
     }
 
     return (
@@ -105,7 +109,13 @@ export default function Landing() {
                         alt="logo" 
                     />
                     <div className="right-container">
-                        <DelayLink to='/web-dev' delay={1000} clickAction={handlePageChange} >
+                        <DelayLink 
+                            to='/web-dev'  
+                            delay={1000} 
+                            clickAction={() => {
+                                handlePageChange();
+                                handleDevPageChange();
+                            }}>
                             <p className="developer" onMouseEnter={handleDevHover} onMouseLeave={handleDevHover}>Web Development</p>
                         </DelayLink>
                         <img 

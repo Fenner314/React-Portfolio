@@ -48,7 +48,7 @@ export default function Nav() {
     }, [])
 
     //Context functions
-    const { handlePageChange } = useContext(Context);
+    const { setDevPage, handlePageChange } = useContext(Context);
 
     //Helpers
     const mobile = window.matchMedia('(max-width: 600px)');
@@ -106,6 +106,10 @@ export default function Nav() {
             handleBurgerToggle() 
         };
         setLogoSmall(true);
+    }
+
+    const handleDevPageChange = () => {
+        setDevPage(false)
     }
 
     const renderNavIcons = () => {
@@ -203,6 +207,16 @@ export default function Nav() {
         )
     }
 
+    const renderBurger = () => {
+        return (
+            <div className={burgerActive ? "burger-toggle burger" : "burger"} onClick={handleBurgerToggle}>
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
+            </div>
+        )
+    }
+
     return (
         <>
             <nav className={burgerActive? "nav-toggle nav" : "nav"} style={{animationDelay: loaded ? '0s' : '4s'}}>
@@ -210,15 +224,18 @@ export default function Nav() {
                 {renderSocialIcons()}
             </nav>
             <div className="pseudo-nav">
-                <DelayLink to='/' delay={1500} clickAction={handlePageChange}>
+                <DelayLink 
+                    to='/' 
+                    delay={1500} 
+                    clickAction={() => {
+                        handlePageChange();
+                        handleDevPageChange();
+                    }}
+                >
                     <span className={logoSmall ? "logo logo-change" : "logo"}><img width="170px" src={logoName250} alt="logo" /></span>
                     <span className={logoSmall ? "logo-small logo-small-change" : "logo-small"}><img width="67px" src={logo250} alt="logo" /></span>
                 </DelayLink>
-                <div className={burgerActive ? "burger-toggle burger" : "burger"} onClick={handleBurgerToggle}>
-                    <div className="line1"></div>
-                    <div className="line2"></div>
-                    <div className="line3"></div>
-                </div>
+                {renderBurger()}
             </div>
         </>
     )

@@ -14,6 +14,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [test, setTest] = useState(true);
   const [noScroll, setNoScroll] = useState(false);
+  const [devPage, setDevPage] = useState('landing');
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,6 +36,8 @@ function App() {
     setLoading,
     test,
     noScroll,
+    devPage,
+    setDevPage,
     handlePageChange,
     handleNoScroll
   }

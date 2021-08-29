@@ -10,7 +10,11 @@ import Resume from './DevComponents/Resume';
 import '../../css/dev.css';
 
 export default function Dev() {
-    const { noScroll, handlePageChange } = useContext(Context);
+    const { noScroll, setDevPage, handlePageChange } = useContext(Context);
+
+    const handleDevPageState = () => {
+        setDevPage(true)
+    }
 
     useEffect(() => {
         setTimeout(() => {
@@ -18,6 +22,7 @@ export default function Dev() {
         }, 2000);
         hiddenY();
         window.addEventListener('resize', hiddenY);
+        handleDevPageState();
     }, [])
     
     return (

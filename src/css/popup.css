@@ -27,13 +27,13 @@
 
     transition: opacity .75s, visibility .75s, transform .75s;
 }
-/* .popup::-webkit-scrollbar {
+.popup::-webkit-scrollbar {
     display: none;
 }
 .popup {
     -ms-overflow-style: none; 
     scrollbar-width: none;  
-} */
+}
 .popup-active {
     opacity: 1;
     visibility: visible;

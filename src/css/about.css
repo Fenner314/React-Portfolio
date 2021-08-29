@@ -1,5 +1,12 @@
 section#about {
-    background: rgba(0, 0, 0, .3);
+    /* background: rgba(0, 0, 0, .3); */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, .3),
+        rgba(0, 0, 0, .3)
+        ), url(../utilities/LandingBackground-desktop.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
     
 .about-container {
