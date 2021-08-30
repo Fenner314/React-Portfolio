@@ -5,6 +5,7 @@ import volumeGreen from "../../utilities/volume64-green.png";
 import logoLeftPlain from "../../utilities/logoLeftPlain.png";
 import logoMiddle from "../../utilities/logoMiddle.png";
 import logoRightPlain from "../../utilities/logoRightPlain.png";
+import hardhat from "../../utilities/hardhat.png";
 
 export {
     logoNameOnly,
@@ -13,5 +14,6 @@ export {
     volumeGreen,
     logoLeftPlain,
     logoMiddle,
-    logoRightPlain
+    logoRightPlain,
+    hardhat
 }

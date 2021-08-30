@@ -47,3 +47,8 @@
 #back-link:focus {
     color: var(--accent);
 }
+ @media only screen and (max-width: 500px) {
+     .confirm-card {
+         width: 90%;
+     }
+ }

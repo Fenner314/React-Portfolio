@@ -6,7 +6,8 @@ import {
     stackedName,
     logoLeftPlain,
     logoMiddle,
-    logoRightPlain
+    logoRightPlain,
+    hardhat
 } from './imgImports';
 import '../../css/landing.css'
 
@@ -16,6 +17,7 @@ export default function Landing() {
     const [musicHover, setMusicHover] = useState(false);
     const [devHover, setDevHover] = useState(false);
     const [size, setSize] = useState('desktop');
+    const [showMessage, setShowMessage] = useState(false);
 
     const { loading, setLoading, setDevPage, handlePageChange } = useContext(Context);
 
@@ -62,8 +64,13 @@ export default function Landing() {
         setDevPage(true)
     }
 
+    const handleMessage = () => {
+        setShowMessage(!showMessage)
+    }
+
     return (
         <section className="showcase full-screen">
+            <div class="test">
             <header>
                 <div className={loading ? "title" : 'title title-load'}>
                     <img 
@@ -94,7 +101,7 @@ export default function Landing() {
                             className={musicHover ? "left-visible" : "left-hidden"} 
                             alt="logo" 
                         />
-                        <DelayLink to='/' delay={1500} clickAction={handlePageChange} >
+                        <DelayLink to='/' delay={1500} clickAction={handleMessage} >
                             <p className="musician" onMouseEnter={handleMusicHover} onMouseLeave={handleMusicHover}>Music Studio</p>
                         </DelayLink> 
                     </div>     
@@ -130,8 +137,14 @@ export default function Landing() {
                         />
                     </div>
                 </div>
-                
+                </div>
             </div>
+            <div class={showMessage ? "construction" : "invisible"}>
+                <span className="close-construction" onClick={handleMessage}>&times;</span>
+                <img src={hardhat} width="200px" alt="hardhat" />
+                <span style={{color: 'black'}}>Music Studio Under Construction</span>
+            </div>
+
         </section>
     )
 }
