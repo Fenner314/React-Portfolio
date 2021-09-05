@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://www.fennerstudios.com"
+  to = "https://www.fennerstudios.com/web-dev"
+  status = 200
+  force = true
