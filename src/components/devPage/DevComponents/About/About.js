@@ -56,7 +56,7 @@ export default function About() {
         return (
             <div className="about-heading">
                 <h1 className="section-title">About Me</h1>
-                <p className="large-text about-subheading">I'm a front end developer and classically trained musician who finds creative solutions to problems.</p>  
+                <p className="large-text about-subheading">I'm a front end developer and classically trained musician. I love creating new things, making things better, and finding creative solutions to problems.</p>  
             </div>
         )
 }

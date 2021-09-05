@@ -15,14 +15,14 @@ export default function Projects() {
                 <ProjectSquare 
                     projectNumber={3}
                     title={'Artsmith Adornments'}
-                    info={'A jewelry E-Commerce website that I created with React.js. I use hooks to handle rendering items, getting their details, and adding items to the shopping cart. I mostly used custom CSS, but I used Bootstrap in a few instances. I handle user authentication with Firebase.'}
+                    info={'A jewelry E-Commerce website that I created with React. I use hooks to handle rendering items, getting their details, and adding items to the shopping cart. I mostly used custom CSS with Bootstrap in a few instances. I handle user authentication with Firebase.'}
                     liveLink={'http://artsmithadorn.surge.sh'}
                     codeLink={'https://github.com/Fenner314/Artsmith-Adornments'}
                 />
                 <ProjectSquare 
                     projectNumber={6}
                     title={'Timothy Anderson'}
-                    info={'Professional website for world-renowned trombonist and teacher, Timothy Anderson. Its simple, single-page design using React.js features parallax backgrounds and efficiently used components. Following website launch, the number and quality of applications for the trombone studio at his conservatory were greater than any other year.'}
+                    info={'Professional website for world-renowned trombonist and teacher, Timothy Anderson. It uses React and features styling with sass, commerce.js for his products, and stripe for payment. Following website launch, the number and quality of applications for the trombone studio at his conservatory were greater than any other year.'}
                     liveLink={'http://timothyandersontrombone.com'}
                     codeLink={'https://github.com/Fenner314/TimAnderson'}
                 />
@@ -34,16 +34,9 @@ export default function Projects() {
                     codeLink={'https://github.com/Fenner314/JonathanTangMusic'}
                 />
                 <ProjectSquare 
-                    projectNumber={2}
-                    title={'Connect Four'}
-                    info={'A simple game of connect four I created with HTML, CSS, and JavaScript. I use a JavaScript class and jQuery to create the game board and perform all functions. I use standard game logic to check for a win each time a new piece is added by seeing if there is 4 pieces in a row of the same color in any direction.'}
-                    liveLink={'https://fennerstudios.com'}
-                    codeLink={'https://github.com/Fenner314/React-Portfolio'}
-                />
-                <ProjectSquare 
                     projectNumber={4}
                     title={'My Portfolio'}
-                    info={'I created my own portfolio with basic HTML, CSS, and JavaScript, but later converted it to use React.js. All of the css animations are custom, as is the design. I had issues with achieving some desired effects from the transfer that I solved with npm packages like howler, react-delay-link, and react-scroll.'}
+                    info={'I created my own portfolio with basic HTML, CSS, and JavaScript, but later converted it to use React. All of the css animations are custom, as is the design. I had issues with achieving some desired effects from the transfer that I solved with npm packages like howler, react-delay-link, and react-scroll.'}
                     liveLink={'http://fennerstudios.com'}
                     codeLink={'https://github.com/Fenner314/react-portfolio'}
                 />
