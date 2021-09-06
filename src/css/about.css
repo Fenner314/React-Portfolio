@@ -169,7 +169,7 @@ section#about {
     opacity: 0.6;
     background-color: rgb(28, 28, 28);
     z-index: 10;
-    transition: background-color .5s ease-in;
+    transition: background-color .5s ease-in-out;
 }
 .content-inactive {
     pointer-events: none;

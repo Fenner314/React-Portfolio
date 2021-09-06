@@ -23,9 +23,8 @@
 
     visibility: hidden;
     opacity: 0;
-    transform: translate(254px, 107px) scale(.1);
 
-    transition: opacity .75s, visibility .75s, transform .75s;
+    transition: opacity .5s, visibility .5s, transform .5s;
 }
 .popup::-webkit-scrollbar {
     display: none;
@@ -37,7 +36,6 @@
 .popup-active {
     opacity: 1;
     visibility: visible;
-    transform: translate(0px, 0px) scale(1);
 }
 
 .popup-header {
@@ -63,7 +61,7 @@
 .popup-links {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
     justify-content: space-evenly;
     margin-bottom: 30px;
 }
