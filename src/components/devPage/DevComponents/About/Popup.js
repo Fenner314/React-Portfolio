@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { cancelGray, cancelGreen } from '../../imgImports'
+import React, { useState } from 'react';
+import Button from '../../../Button';
+import { cancelGray, cancelGreen } from '../../imgImports';
 
 export default function Popup({ popupActive, handlePopupChange }) {
     const [closeIconActive, setCloseIconActive] = useState(false);
@@ -29,10 +30,23 @@ export default function Popup({ popupActive, handlePopupChange }) {
             </div>
             <p className="popup-bottom">Don't believe me? Check out these sources!</p>
             <div className="popup-links">
-                <a href="https://www.huffpost.com/entry/composing-code-why-musici_b_10714288" rel="noreferrer" target="_blank"><button>Huffpost</button></a>
-                <a href="https://medium.com/@alexjacobs/why-do-musicians-make-good-programmers-e9a51c8ddebc" rel="noreferrer" target="_blank"><button>Medium</button></a>
-                <a href="https://hackernoon.com/why-are-so-many-coders-musicians-60389fb8b645" rel="noreferrer" target="_blank"><button>Hackernoon</button></a>
-                <a href="https://www.hackreactor.com/blog/3-musician-skills-that-translate-to-coding" rel="noreferrer" target="_blank"><button>Hacker Reactor</button></a>
+                <a href="https://www.huffpost.com/entry/composing-code-why-musici_b_10714288" rel="noreferrer" target="_blank">
+                    {/* <button>Huffpost</button> */}
+                    <Button width='100px' height='50px' fontSize='14px' borderRadius='5px'>Huffpost</Button>
+                </a>
+                <a href="https://medium.com/@alexjacobs/why-do-musicians-make-good-p
+                rogrammers-e9a51c8ddebc" rel="noreferrer" target="_blank">
+                    {/* <button>Medium</button> */}
+                    <Button width='100px' height='50px' fontSize='14px' borderRadius='5px'>Medium</Button>
+                </a>
+                <a href="https://hackernoon.com/why-are-so-many-coders-musicians-60389fb8b645" rel="noreferrer" target="_blank">
+                    {/* <button>Hackernoon</button> */}
+                    <Button width='100px' height='50px' fontSize='14px' borderRadius='5px'>Hackernoon</Button>
+                </a>
+                <a href="https://www.hackreactor.com/blog/3-musician-skills-that-translate-to-coding" rel="noreferrer" target="_blank">
+                    {/* <button>Hacker Reactor</button> */}
+                    <Button width='100px' height='50px' fontSize='14px' borderRadius='5px' extraTextStyle={{top: '6px'}} difLineHeight='18px'>Hacker Reactor</Button>
+                </a>
             </div>
         </div>
     )

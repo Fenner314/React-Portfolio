@@ -69,46 +69,8 @@
 }
 
 .popup-links button {
-    height: 50px;
-    width: 100px;
-    padding: 5px;
-    border-radius: 5px;
-    color: var(--accent);
-    border: 2px solid var(--accent);
-    background: transparent;
     margin-top: 20px;
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-    outline: none;
-
-    transition: color .5s;
 }
-.popup-links button:hover,
-.popup-links button:focus {
-    cursor: pointer;
-    outline: none;
-    color: var(--darkGray);
-}
-.popup-links button:before {
-    content: '';
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 180%;
-    height: 150%;
-    background-color: var(--accent);
-    z-index: -1;
-
-    transition: transform .5s ease-in-out;
-    transform: translate(-120%, 0) skew(-30deg);
-}
-.popup-links button:hover::before, 
-.popup-links button:focus::before {
-    transform: translate(-10%, 0)
-    skew(-15deg);
-}
-
 @media only screen and (max-width: 600px) {
     .popup {
         min-width: 100vw;

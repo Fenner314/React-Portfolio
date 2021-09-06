@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 // import { landingBackground } from '../../imgImports';
 import Popup from './Popup';
+import Button from '../../../Button';
 import { Context } from '../../../../App';
 
 export default function About() {
@@ -72,13 +73,14 @@ export default function About() {
                 </div>
                 <div className="sources">
                     <p className="medium-text bold">How does being a musician make me a better developer?</p>
-                    <button className="button-container popup-button" onClick={handlePopupChange}>
+                    <Button width='200px' height='50px' fontSize='1.4rem' id='popup-button' onClick={handlePopupChange}>Click here!</Button>
+                    {/* <button className="button-container popup-button" onClick={handlePopupChange}>
                         <div className="button-inner">
                             <span className="button-bg"></span>
                             <span className="button-base"></span>
                             <span className="button-text">Click here!</span>
                         </div>
-                    </button>
+                    </button> */}
                 </div>
             </div>
         )

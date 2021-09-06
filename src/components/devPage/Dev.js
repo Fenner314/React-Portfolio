@@ -7,6 +7,7 @@ import About from './DevComponents/About/About';
 import Projects from './DevComponents/Projects';
 import Contact from './DevComponents/Contact/Contact';
 import Resume from './DevComponents/Resume';
+import Button from '../Button';
 import '../../css/dev.css';
 
 export default function Dev() {

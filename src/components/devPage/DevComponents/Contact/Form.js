@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Button from '../../../Button';
 import { Context } from '../../../../App';
 
 export default function Form() {
@@ -35,14 +36,7 @@ export default function Form() {
                 <textarea className="input" name="message" rows="5" cols="60" resize="false" required />
                 <span className="floating-label">Message</span>
             </div>
-            {/* <button type="submit">Send</button> */}
-            <button className="button-container form-button" id="sendMessage" type="submit">
-                <div className="button-inner">
-                    <span className="button-bg"></span>
-                    <span className="button-base"></span>
-                    <span className="button-text">Send</span>
-                </div>
-            </button>
+            <Button width='110px' height='50px' fontSize='1rem' >Send</Button>
         </form>
     )
 }
