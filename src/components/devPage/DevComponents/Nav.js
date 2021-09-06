@@ -224,26 +224,26 @@ export default function Nav() {
                 {renderSocialIcons()}
             </nav>
             <div className="pseudo-nav">
-                {/* <DelayLink 
+                <DelayLink 
                     to='/' 
                     delay={1500} 
                     clickAction={() => {
                         handlePageChange();
                         handleDevPageChange();
                     }}
-                > */}
-                <Link
+                >
+                {/* <Link
                     to="home" 
                     smooth={true} 
                     duration={800} 
                     spy={true}
                     onSetActive={handleHomeActive}
                     onSetInactive={handleHomeInactive}
-                >
+                > */}
                     <span className={logoSmall ? "logo logo-change" : "logo"}><img width="170px" src={logoName250} alt="logo" /></span>
                     <span className={logoSmall ? "logo-small logo-small-change" : "logo-small"}><img width="67px" src={logo250} alt="logo" /></span>
-                </Link>
-                {/* </DelayLink> */}
+                {/* </Link> */}
+                </DelayLink>
                 {renderBurger()}
             </div>
         </>
