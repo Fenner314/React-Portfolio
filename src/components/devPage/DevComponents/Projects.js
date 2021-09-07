@@ -23,7 +23,7 @@ export default function Projects() {
                     projectNumber={6}
                     title={'Timothy Anderson'}
                     info={'Professional website for world-renowned trombonist and teacher, Timothy Anderson. It uses React and features styling with sass, commerce.js for his products, and stripe for payment. Following website launch, the number and quality of applications for the trombone studio at his conservatory were greater than any other year.'}
-                    liveLink={'http://timothyandersontrombone.com'}
+                    liveLink={'http://timothyandersontrombone.netlify.app'}
                     codeLink={'https://github.com/Fenner314/TimAnderson'}
                 />
                 <ProjectSquare 
