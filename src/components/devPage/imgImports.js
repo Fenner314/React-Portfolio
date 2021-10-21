@@ -18,6 +18,15 @@ import cancelGray from '../../utilities/cancel-gray.png'
 import cancelGreen from '../../utilities/cancel-green.png'
 import landingBackground from '../../utilities/LandingBackground-desktop.jpg'
 import resume from '../../utilities/Fenner_Resume.pdf'
+import boothPicOne from '../../utilities/boothPicOne.png'
+import boothPicTwo from '../../utilities/boothPicTwo.png'
+import boothPicThree from '../../utilities/boothPicThree.png'
+import boothPicFour from '../../utilities/boothPicFour.png'
+import boothPicFive from '../../utilities/boothPicFive.png'
+import boothPicSix from '../../utilities/boothPicSix.png'
+import boothPicSeven from '../../utilities/boothPicSeven.png'
+import boothPicEight from '../../utilities/boothPicEight.png'
+import boothPicNine from '../../utilities/boothPicNine.png'
 
 export {
 	homeGray,
@@ -40,4 +49,13 @@ export {
 	cancelGreen,
 	landingBackground,
 	resume,
+	boothPicOne,
+	boothPicTwo,
+	boothPicThree,
+	boothPicFour,
+	boothPicFive,
+	boothPicSix,
+	boothPicSeven,
+	boothPicEight,
+	boothPicNine,
 }

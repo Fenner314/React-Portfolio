@@ -1,0 +1,32 @@
+.booth {
+	background-image: linear-gradient(
+		to bottom right,
+		rgb(49, 49, 49),
+		rgb(20, 20, 20)
+	);
+	text-align: center;
+}
+
+.booth h1,
+.booth p {
+	margin: 40px auto;
+	max-width: 40ch;
+}
+.booth-pics-container {
+	width: 90%;
+	margin-left: 5%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.booth-pics-container img {
+	margin: 20px;
+	width: 100%;
+}
+
+#booth-button {
+	left: 0;
+	right: 0;
+	margin: 40px auto;
+}
