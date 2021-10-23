@@ -27,6 +27,12 @@ import boothPicSix from '../../utilities/boothPicSix.png'
 import boothPicSeven from '../../utilities/boothPicSeven.png'
 import boothPicEight from '../../utilities/boothPicEight.png'
 import boothPicNine from '../../utilities/boothPicNine.png'
+import booth from '../../utilities/BoothOrTableWidget.png'
+import bb4k from '../../utilities/bb4k-stacked-logo.png'
+import artsmith from '../../utilities/artsmith.png'
+import tim from '../../utilities/TimSiteImage.png'
+import jonathan from '../../utilities/TangMusic.png'
+import myLogo from '../../utilities/logo1000.png'
 
 export {
 	homeGray,
@@ -58,4 +64,10 @@ export {
 	boothPicSeven,
 	boothPicEight,
 	boothPicNine,
+	booth,
+	bb4k,
+	artsmith,
+	tim,
+	jonathan,
+	myLogo,
 }
