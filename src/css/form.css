@@ -1,86 +1,86 @@
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .input-container {
-    position: relative;
-    width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .input {
-    margin-bottom: 10px;
-    border: none;
-    padding: 7px;
-    background-color: var(--lightGray);
-    color: white;
+	margin-bottom: 10px;
+	border: none;
+	padding: 13px 7px 0;
+	background-color: var(--lightGray);
+	color: white;
 }
 .input:focus {
-    border: none;
-    outline: none;
+	border: none;
+	outline: none;
 }
 .input:focus ~ .floating-label,
 .input:not(:focus):valid ~ .floating-label {
-    left: 7px;
-    top: 1px;
-    font-size: 11px;
-    color: var(--accent);
+	left: 7px;
+	top: 1px;
+	font-size: 11px;
+	color: var(--accent);
 }
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px var(--lightGray) inset !important;
-    -webkit-text-fill-color: white !important;
+	-webkit-box-shadow: 0 0 0 30px var(--lightGray) inset !important;
+	-webkit-text-fill-color: white !important;
 }
 
 .floating-label {
-    position: absolute;
-    pointer-events: none;
-    left: 7px;
-    top: 13px;
-    transition: 0.2s ease all;
-    color: gray;
+	position: absolute;
+	pointer-events: none;
+	left: 7px;
+	top: 13px;
+	transition: 0.2s ease all;
+	color: gray;
 }
 
 .contact-form input {
-    height: 50px;
-    max-width: 350px;
-    width: 100%;
+	height: 50px;
+	max-width: 350px;
+	width: 100%;
 }
 
 .contact-form textarea {
-    width: 100%;
-    max-width: 350px;
-    resize: none;
-    padding: 15px 7px;
+	width: 100%;
+	max-width: 350px;
+	resize: none;
+	padding: 22px 7px;
 }
 
 .form-button {
-    width: 110px;
-    height: 50px;
-    line-height: 50px;
-    letter-spacing: 1px;
-    font-size: 1rem;
-    color: var(--accent);
-    border-radius: none;
+	width: 110px;
+	height: 50px;
+	line-height: 50px;
+	letter-spacing: 1px;
+	font-size: 1rem;
+	color: var(--accent);
+	border-radius: none;
 
-    transition: all .1s
+	transition: all 0.1s;
 }
 
 @media only screen and (max-width: 756px) {
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .contact-message {
-        margin-bottom: 30px;
-    }
-    .contact-form input,
-    .contact-form textarea {
-        /* min-width: 250px;
+	.contact-container {
+		display: flex;
+		flex-direction: column;
+	}
+	.contact-message {
+		margin-bottom: 30px;
+	}
+	.contact-form input,
+	.contact-form textarea {
+		/* min-width: 250px;
         width: 70vw;
         max-width: 350px; */
-    }
+	}
 }
